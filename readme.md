@@ -10,9 +10,27 @@ then collated into a document using the [FabrikamFiber Devops](/Final/FabFiber%2
 document as a guide.
 
 ### TE Instructions
+In order to make changes to this repo, you must fork the repo. Log into Github, 
+browse to this repo and select "Fork" in the top-right.
+
+Once you have forked the repo, you can clone it locally. Make your changes and 
+then push them to your forked repo. Then you can create a Pull Request and the
+repo owners will review your changes.
+
+The folling commands can be used to clone, commit and push changes once you 
+have forked the repo.
+
 > **Note:** All the commands must be performed from the root folder of the repo.
 
-1. Once you have interviewed a customer, clone this repo.
+1. Once you have interviewed a customer, fork this repo. This creates a copy of
+the repo under your own Github account. This is the only way to make changes to
+the repo.
+
+1. Clone the forked repo.
+	```
+	git clone url_of_your_forked_repo
+	```
+
 1. If you have already cloned the repo, make sure you are on the `master` branch
 and pull the latest repo.
 
@@ -21,17 +39,14 @@ and pull the latest repo.
 	git pull
 	```
 
-1. Create a new branch using the customer name as the branch name (e.g. Fabrikam)
-
-	```
-	git checkout -b Fabrikam
-	```
-
+1. Make your changes.
 1. Under the `Interviews and Raw Data` folder, create a new folder with the name 
 of the customer (e.g. FabrikamFiber).
 1. Copy the interview documents, logos and any other pertinent material into this
 folder.
-1. Add the files.
+1. Add the final white-paper for the customer to the `Final` folder.
+1. When you are ready to publish your new files and edits, you need to add the files
+to the local git repo.
 
 	```
 	git add .
@@ -46,8 +61,8 @@ folder.
 1. Publish the branch to Github (use the same name as your local branch):
 
 	```
-	git push -u origin Fabrikam
+	git push
 	```
 
 1. [Create a pull request](https://help.github.com/articles/creating-a-pull-request/)
-for the branch on Github.
+for the fork on Github.
